@@ -23,5 +23,12 @@ namespace Test2
             PanelSocios.Show();
             this.Hide();
         }
+
+        private void btnCouta_Click(object sender, EventArgs e)
+        {
+            wfCoutas PaneCoutas = new wfCoutas();
+            PaneCoutas.Show();
+            this.Hide();
+        }
     }
 }

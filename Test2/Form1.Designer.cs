@@ -51,6 +51,7 @@
             this.btnCouta.TabIndex = 1;
             this.btnCouta.Text = "GENERAR COUTA";
             this.btnCouta.UseVisualStyleBackColor = true;
+            this.btnCouta.Click += new System.EventHandler(this.btnCouta_Click);
             // 
             // btnReunion
             // 
