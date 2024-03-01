@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -60,6 +61,12 @@
     <Compile Include="wfCoutas.Designer.cs">
       <DependentUpon>wfCoutas.cs</DependentUpon>
     </Compile>
+    <Compile Include="wfLote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="wfLote.Designer.cs">
+      <DependentUpon>wfLote.cs</DependentUpon>
+    </Compile>
     <Compile Include="wfSocios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +85,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="wfCoutas.resx">
+      <DependentUpon>wfCoutas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="wfLote.resx">
+      <DependentUpon>wfLote.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="wfSocios.resx">
       <DependentUpon>wfSocios.cs</DependentUpon>
     </EmbeddedResource>

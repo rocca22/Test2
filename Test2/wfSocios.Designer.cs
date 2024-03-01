@@ -47,9 +47,13 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.dgvListaSocios = new System.Windows.Forms.DataGridView();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnLote = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaSocios)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -61,6 +65,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label1
             // 
@@ -77,6 +82,7 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(100, 20);
             this.txtNombre.TabIndex = 2;
+            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
             // txtDNI
             // 
@@ -101,6 +107,7 @@
             this.txtApellidoP.Name = "txtApellidoP";
             this.txtApellidoP.Size = new System.Drawing.Size(100, 20);
             this.txtApellidoP.TabIndex = 8;
+            this.txtApellidoP.TextChanged += new System.EventHandler(this.txtApellidoP_TextChanged);
             // 
             // label3
             // 
@@ -117,6 +124,7 @@
             this.txtApellidoM.Name = "txtApellidoM";
             this.txtApellidoM.Size = new System.Drawing.Size(100, 20);
             this.txtApellidoM.TabIndex = 6;
+            this.txtApellidoM.TextChanged += new System.EventHandler(this.txtApellidoM_TextChanged);
             // 
             // label4
             // 
@@ -195,14 +203,14 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(53, 45);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(391, 220);
+            this.groupBox1.Size = new System.Drawing.Size(409, 220);
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "DATOS DEL SOCIO";
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(489, 72);
+            this.btnAgregar.Location = new System.Drawing.Point(923, 112);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(93, 50);
             this.btnAgregar.TabIndex = 16;
@@ -213,26 +221,61 @@
             // dgvListaSocios
             // 
             this.dgvListaSocios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvListaSocios.Location = new System.Drawing.Point(173, 300);
+            this.dgvListaSocios.Location = new System.Drawing.Point(74, 271);
             this.dgvListaSocios.Name = "dgvListaSocios";
-            this.dgvListaSocios.Size = new System.Drawing.Size(541, 178);
+            this.dgvListaSocios.Size = new System.Drawing.Size(1052, 307);
             this.dgvListaSocios.TabIndex = 17;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.label8);
+            this.groupBox2.Controls.Add(this.btnLote);
+            this.groupBox2.Location = new System.Drawing.Point(497, 45);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(268, 220);
+            this.groupBox2.TabIndex = 18;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "LOTES";
+            // 
+            // btnLote
+            // 
+            this.btnLote.Location = new System.Drawing.Point(81, 27);
+            this.btnLote.Name = "btnLote";
+            this.btnLote.Size = new System.Drawing.Size(115, 38);
+            this.btnLote.TabIndex = 0;
+            this.btnLote.Text = "AGREGAR LOTE";
+            this.btnLote.UseVisualStyleBackColor = true;
+            this.btnLote.Click += new System.EventHandler(this.btnLote_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(22, 86);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(35, 13);
+            this.label8.TabIndex = 1;
+            this.label8.Text = "label8";
             // 
             // wfSocios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(962, 539);
+            this.ClientSize = new System.Drawing.Size(1161, 590);
+            this.ControlBox = false;
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.dgvListaSocios);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "wfSocios";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "wfSocios";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaSocios)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -257,5 +300,8 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.DataGridView dgvListaSocios;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button btnLote;
+        private System.Windows.Forms.Label label8;
     }
 }
